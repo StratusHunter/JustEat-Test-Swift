@@ -11,6 +11,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 import RxAlamofire
+import ObjectMapper
 
 class ViewController: UIViewController {
 
@@ -18,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
 
     private let bag = DisposeBag()
-    private var tableDelegate: ResturantTableDelegate?
+    private var tableDelegate: ResturantTableDelegate!
 
     override func viewDidLoad() {
 
@@ -65,15 +66,16 @@ class ViewController: UIViewController {
         }
 
         observer.observeOn(MainScheduler.instance)
-        .subscribe(onNext: { event in
+        .subscribe(onNext: { json in
 
-                        //print(event)
-                   },
-                   onError: {
-                       error in
+            guard let resturantJSON = json["Restaurants"], let resturants = Mapper<Resturant>().mapArray(resturantJSON) else {
 
-                       print("Error \(error)")
-                   })
+                print("Error parsing JSON")
+                return
+            }
+
+            self.tableDelegate.setResturantArray(resturants)
+        })
         .addDisposableTo(bag)
     }
 }

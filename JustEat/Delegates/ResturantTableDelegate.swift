@@ -10,7 +10,7 @@ import Rswift
 
 class ResturantTableDelegate : NSObject, UITableViewDelegate {
 
-    internal var resturantArray = Array<Resturant>()
+    private var resturantArray = Array<Resturant>()
     private let bag = DisposeBag()
 
     init(tableView:UITableView) {
@@ -26,5 +26,11 @@ class ResturantTableDelegate : NSObject, UITableViewDelegate {
             cell.setupWithResturant(element)
         }
         .addDisposableTo(bag)
+    }
+
+    func setResturantArray(array : Array<Resturant>) {
+
+        resturantArray.removeAll(keepCapacity: false)
+        resturantArray.appendContentsOf(array)
     }
 }

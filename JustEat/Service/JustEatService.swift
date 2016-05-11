@@ -27,7 +27,7 @@ class JustEatService {
         return Manager(configuration: configuration)
     }()
 
-    static func resturantSearchObservable(postcode: String) -> Observable<(NSHTTPURLResponse, AnyObject)>? {
+    static func resturantSearchObservable(postcode: String) -> Observable<AnyObject>? {
 
         guard let urlPostcode = postcode.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()) else {
 
@@ -36,6 +36,6 @@ class JustEatService {
         }
 
         let url = "\(RESTURANT_URL)?q=\(urlPostcode)"
-        return JustEatService.manager.rx_responseJSON(.GET, url)
+        return JustEatService.manager.rx_JSON(.GET, url)
     }
 }
