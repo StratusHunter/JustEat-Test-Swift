@@ -19,43 +19,48 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
 
     private let bag = DisposeBag()
-    private var tableDelegate: ResturantTableDelegate!
+    private var resturantArray = Variable<[Resturant]>([])
 
     override func viewDidLoad() {
 
         super.viewDidLoad()
 
-        tableDelegate = ResturantTableDelegate(tableView: tableView)
-
+        bindArrayToTableView()
         subscribeSearchChange()
+    }
+
+    private func bindArrayToTableView() {
+
+        //Creates a binding between the array having values and the tableview being shown/hidden
+        resturantArray.asObservable()
+        .map {
+            $0.isEmpty
+        }
+        .bindTo(tableView.rx_hidden)
+        .addDisposableTo(bag)
+
+        //Creates a binding to the array and the tableview to load the cells
+        resturantArray.asObservable()
+        .bindTo(tableView.rx_itemsWithCellIdentifier(R.reuseIdentifier.resturantCell.identifier, cellType: ResturantCell.self)) {
+            (_, element, cell) in
+
+            cell.setupWithResturant(element)
+        }
+        .addDisposableTo(bag)
     }
 
     private func subscribeSearchChange() {
 
         //Use rx to monitor text changes in the search bar. Avoids hammering the API using the throttle command and will not perform a search on the same text input.
         searchBar.rx_text
-        .throttle(0.6, scheduler: MainScheduler.instance)
+        .throttle(0.4, scheduler: MainScheduler.instance)
         .distinctUntilChanged()
         .subscribeNext {
-            [unowned self] (postcode) in
+            [unowned self] (postcode : String) in
 
-            (postcode.characters.count == 0) ? self.clearSearchList() : self.searchWithPostcode(postcode)
+            postcode.characters.count == 0 ? self.clearSearch() : self.searchWithPostcode(postcode)
         }
         .addDisposableTo(bag)
-    }
-
-    //Convienience function to clear the list
-    private func clearSearchList() {
-
-        reloadSearchList(Array<Resturant>())
-    }
-
-    private func reloadSearchList(resturantArray: [Resturant]) {
-
-        //tableDelegate.resturantArray = resturantArray
-
-        tableView.hidden = (resturantArray.count == 0)
-        tableView.reloadData()
     }
 
     private func searchWithPostcode(postcode: String) {
@@ -66,16 +71,33 @@ class ViewController: UIViewController {
         }
 
         observer.observeOn(MainScheduler.instance)
-        .subscribe(onNext: { json in
+        .subscribe(onNext: {
+           [unowned self] json in
 
-            guard let resturantJSON = json["Restaurants"], let resturants = Mapper<Resturant>().mapArray(resturantJSON) else {
-
-                print("Error parsing JSON")
-                return
-            }
-
-            self.tableDelegate.setResturantArray(resturants)
+            self.parseJSON(json)
         })
         .addDisposableTo(bag)
+    }
+
+    private func parseJSON(json:AnyObject) {
+
+        guard let resturantJSON = json["Restaurants"], let resturants = Mapper<Resturant>().mapArray(resturantJSON) else {
+
+            print("Error parsing JSON")
+            return
+        }
+
+        self.setResturantArray(resturants)
+    }
+
+    private func clearSearch() {
+
+        setResturantArray([Resturant]())
+    }
+
+    private func setResturantArray(resturants: [Resturant]) {
+
+        self.resturantArray.value.removeAll(keepCapacity: false)
+        self.resturantArray.value += resturants
     }
 }

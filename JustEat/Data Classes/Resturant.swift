@@ -17,7 +17,7 @@ class Resturant: Mappable {
 
     func mapping(map:Map) {
 
-        name    <- map["name"]
-        address <- map["address"]
+        name    <- map["Name"]
+        address <- map["Address"]
     }
 }

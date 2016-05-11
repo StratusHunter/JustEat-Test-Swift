@@ -16,7 +16,6 @@
 		AB2257AF20437F24DD65B0B4 /* ResturantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2254E7366963E6AAD1D1CC /* ResturantCell.swift */; };
 		AB225CBA73A04C6AA59DC2CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB2251D3BF545758922A29FD /* LaunchScreen.storyboard */; };
 		AB225EB795631504CCAE172F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB225B69640FF04C300A5879 /* R.generated.swift */; };
-		AB225EF83C056A8B5D6357FA /* ResturantTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB225E9124A0A45B8AD7A7F8 /* ResturantTableDelegate.swift */; };
 		B9A5DEC461805B3944277CAE /* Pods_JustEat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FFC916D798D8070F012FDB /* Pods_JustEat.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +31,6 @@
 		AB225A9DA9BDB78B715D0176 /* JustEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB225B69640FF04C300A5879 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		AB225C347A4B7C39FE5488D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AB225E9124A0A45B8AD7A7F8 /* ResturantTableDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResturantTableDelegate.swift; sourceTree = "<group>"; };
 		AB225F9DAC69E612D8FC9EBD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AB225FD53A707B692FCF77D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		D5B19532B6BA6A1FAFF04727 /* Pods-JustEat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustEat.release.xcconfig"; path = "Pods/Target Support Files/Pods-JustEat/Pods-JustEat.release.xcconfig"; sourceTree = "<group>"; };
@@ -57,14 +55,6 @@
 				D5B19532B6BA6A1FAFF04727 /* Pods-JustEat.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		AB2250401BBB1BF0DB698CF0 /* Delegates */ = {
-			isa = PBXGroup;
-			children = (
-				AB225E9124A0A45B8AD7A7F8 /* ResturantTableDelegate.swift */,
-			);
-			path = Delegates;
 			sourceTree = "<group>";
 		};
 		AB2252F303F1CB4437EF7984 /* Data Classes */ = {
@@ -127,7 +117,6 @@
 				AB2256BD1C4EE42FA8D0C383 /* Main.storyboard */,
 				AB2257129CB3E0CC0DD60538 /* ViewControllers */,
 				AB2252F303F1CB4437EF7984 /* Data Classes */,
-				AB2250401BBB1BF0DB698CF0 /* Delegates */,
 				AB225A013B424E47E7CD98C8 /* Service */,
 				AB2259937C68E6A8C7AC5AFD /* Views */,
 				AB225B69640FF04C300A5879 /* R.generated.swift */,
@@ -422,7 +411,6 @@
 				AB22508316333C3FF2628721 /* Resturant.swift in Sources */,
 				AB2257AF20437F24DD65B0B4 /* ResturantCell.swift in Sources */,
 				AB225EB795631504CCAE172F /* R.generated.swift in Sources */,
-				AB225EF83C056A8B5D6357FA /* ResturantTableDelegate.swift in Sources */,
 				AB2256407D700D62D8201D33 /* JustEatService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
