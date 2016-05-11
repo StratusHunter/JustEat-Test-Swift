@@ -1,0 +1,573 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB22508316333C3FF2628721 /* Resturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB225176B6F6DBE1BDF0C850 /* Resturant.swift */; };
+		AB22543ABC6710704CBC55B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB2254FA863AEAFC0FE53A50 /* Assets.xcassets */; };
+		AB2255C48C3A7B5947C26B2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB225724F33C16404021E174 /* AppDelegate.swift */; };
+		AB22562B79482D3284D33F03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB2256BD1C4EE42FA8D0C383 /* Main.storyboard */; };
+		AB2256407D700D62D8201D33 /* JustEatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2253D7586CE5FA24F31FD6 /* JustEatService.swift */; };
+		AB2257A3AAAE787F4A222839 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB225F9DAC69E612D8FC9EBD /* ViewController.swift */; };
+		AB2257AF20437F24DD65B0B4 /* ResturantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2254E7366963E6AAD1D1CC /* ResturantCell.swift */; };
+		AB225CBA73A04C6AA59DC2CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB2251D3BF545758922A29FD /* LaunchScreen.storyboard */; };
+		AB225EB795631504CCAE172F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB225B69640FF04C300A5879 /* R.generated.swift */; };
+		B9A5DEC461805B3944277CAE /* Pods_JustEat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FFC916D798D8070F012FDB /* Pods_JustEat.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		27CDF9E398EAE0DCD0BB3B5B /* Pods-JustEat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustEat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustEat/Pods-JustEat.debug.xcconfig"; sourceTree = "<group>"; };
+		44FFC916D798D8070F012FDB /* Pods_JustEat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustEat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB225176B6F6DBE1BDF0C850 /* Resturant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
+		AB2253D7586CE5FA24F31FD6 /* JustEatService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JustEatService.swift; sourceTree = "<group>"; };
+		AB2254E7366963E6AAD1D1CC /* ResturantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResturantCell.swift; sourceTree = "<group>"; };
+		AB2254FA863AEAFC0FE53A50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB225724F33C16404021E174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AB2257DC306F651E7FCF8568 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB225A9DA9BDB78B715D0176 /* JustEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB225B69640FF04C300A5879 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		AB225C347A4B7C39FE5488D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AB225F9DAC69E612D8FC9EBD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB225FD53A707B692FCF77D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		D5B19532B6BA6A1FAFF04727 /* Pods-JustEat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustEat.release.xcconfig"; path = "Pods/Target Support Files/Pods-JustEat/Pods-JustEat.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB225214E48F48F8BEC6C78B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9A5DEC461805B3944277CAE /* Pods_JustEat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E46667E58D610660765AF40 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27CDF9E398EAE0DCD0BB3B5B /* Pods-JustEat.debug.xcconfig */,
+				D5B19532B6BA6A1FAFF04727 /* Pods-JustEat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AB2252F303F1CB4437EF7984 /* Data Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AB225176B6F6DBE1BDF0C850 /* Resturant.swift */,
+			);
+			path = "Data Classes";
+			sourceTree = "<group>";
+		};
+		AB2257129CB3E0CC0DD60538 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB225F9DAC69E612D8FC9EBD /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AB22578535E8D6BFC6C17C1D = {
+			isa = PBXGroup;
+			children = (
+				AB2259D06673506218F4B41C /* Products */,
+				AB225C928F24A0789119F602 /* JustEat */,
+				2E46667E58D610660765AF40 /* Pods */,
+				BE020AE2AEA25C3A2F1BDF91 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AB2259937C68E6A8C7AC5AFD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB2254E7366963E6AAD1D1CC /* ResturantCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AB2259D06673506218F4B41C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB225A9DA9BDB78B715D0176 /* JustEat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB225A013B424E47E7CD98C8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AB2253D7586CE5FA24F31FD6 /* JustEatService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AB225C928F24A0789119F602 /* JustEat */ = {
+			isa = PBXGroup;
+			children = (
+				AB225FD53A707B692FCF77D0 /* Info.plist */,
+				AB2254FA863AEAFC0FE53A50 /* Assets.xcassets */,
+				AB2251D3BF545758922A29FD /* LaunchScreen.storyboard */,
+				AB225724F33C16404021E174 /* AppDelegate.swift */,
+				AB2256BD1C4EE42FA8D0C383 /* Main.storyboard */,
+				AB2257129CB3E0CC0DD60538 /* ViewControllers */,
+				AB2252F303F1CB4437EF7984 /* Data Classes */,
+				AB225A013B424E47E7CD98C8 /* Service */,
+				AB2259937C68E6A8C7AC5AFD /* Views */,
+				AB225B69640FF04C300A5879 /* R.generated.swift */,
+			);
+			path = JustEat;
+			sourceTree = "<group>";
+		};
+		BE020AE2AEA25C3A2F1BDF91 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44FFC916D798D8070F012FDB /* Pods_JustEat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB225D1A3C59341AF0E1C9BE /* JustEat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB22578692B2148AC676C56C /* Build configuration list for PBXNativeTarget "JustEat" */;
+			buildPhases = (
+				35B446D23059D280661C283D /* 📦 Check Pods Manifest.lock */,
+				2B67AC3D8D41F63A1346B07E /* uD83DuDCE6 Check Pods Manifest.lock */,
+				8442E234889FF16B6859D502 /* uD83DuDCE6 Check Pods Manifest.lock */,
+				C0627718AF07313301ABD372 /* uD83DuDCE6 Check Pods Manifest.lock */,
+				0027205B1CE3239900D10B4E /* RSwift */,
+				AB22547BDE38579109252C57 /* Sources */,
+				AB225214E48F48F8BEC6C78B /* Frameworks */,
+				AB225875D1DD0E32DDC541CC /* Resources */,
+				98B655B513ED362F8B3B9F99 /* uD83DuDCE6 Embed Pods Frameworks */,
+				C0EC566AAE434655421BC33E /* uD83DuDCE6 Copy Pods Resources */,
+				C69EEB5BA58566598E09CE97 /* uD83DuDCE6 Embed Pods Frameworks */,
+				A317D6F57487E6544CB6361B /* uD83DuDCE6 Copy Pods Resources */,
+				BA0D7A9FC680305A1457F9EB /* uD83DuDCE6 Embed Pods Frameworks */,
+				BA6708170B2A04A6BECA7A2A /* uD83DuDCE6 Copy Pods Resources */,
+				DFDE2693789DF98F0A136BAE /* 📦 Embed Pods Frameworks */,
+				18C467303343EF8F94334D6F /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JustEat;
+			productName = JustEat;
+			productReference = AB225A9DA9BDB78B715D0176 /* JustEat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB225D55F2E89BD319AAB0D6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				ORGANIZATIONNAME = "Bulb Studios Ltd";
+			};
+			buildConfigurationList = AB2257078387B37E167CB18E /* Build configuration list for PBXProject "JustEat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AB22578535E8D6BFC6C17C1D;
+			productRefGroup = AB2259D06673506218F4B41C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB225D1A3C59341AF0E1C9BE /* JustEat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB225875D1DD0E32DDC541CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB22543ABC6710704CBC55B2 /* Assets.xcassets in Resources */,
+				AB225CBA73A04C6AA59DC2CF /* LaunchScreen.storyboard in Resources */,
+				AB22562B79482D3284D33F03 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0027205B1CE3239900D10B4E /* RSwift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = RSwift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT/JustEat\"";
+		};
+		18C467303343EF8F94334D6F /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "\uD83D\uDCE6 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustEat/Pods-JustEat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B67AC3D8D41F63A1346B07E /* uD83DuDCE6 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "uD83DuDCE6 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		35B446D23059D280661C283D /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "\uD83D\uDCE6 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8442E234889FF16B6859D502 /* uD83DuDCE6 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "uD83DuDCE6 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		98B655B513ED362F8B3B9F99 /* uD83DuDCE6 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "uD83DuDCE6 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustEat/Pods-JustEat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A317D6F57487E6544CB6361B /* uD83DuDCE6 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "uD83DuDCE6 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustEat/Pods-JustEat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA0D7A9FC680305A1457F9EB /* uD83DuDCE6 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "uD83DuDCE6 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustEat/Pods-JustEat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA6708170B2A04A6BECA7A2A /* uD83DuDCE6 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "uD83DuDCE6 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustEat/Pods-JustEat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0627718AF07313301ABD372 /* uD83DuDCE6 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "uD83DuDCE6 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C0EC566AAE434655421BC33E /* uD83DuDCE6 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "uD83DuDCE6 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustEat/Pods-JustEat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C69EEB5BA58566598E09CE97 /* uD83DuDCE6 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "uD83DuDCE6 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustEat/Pods-JustEat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFDE2693789DF98F0A136BAE /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "\uD83D\uDCE6 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustEat/Pods-JustEat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB22547BDE38579109252C57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB2255C48C3A7B5947C26B2C /* AppDelegate.swift in Sources */,
+				AB2257A3AAAE787F4A222839 /* ViewController.swift in Sources */,
+				AB22508316333C3FF2628721 /* Resturant.swift in Sources */,
+				AB2257AF20437F24DD65B0B4 /* ResturantCell.swift in Sources */,
+				AB225EB795631504CCAE172F /* R.generated.swift in Sources */,
+				AB2256407D700D62D8201D33 /* JustEatService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AB2251D3BF545758922A29FD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB225C347A4B7C39FE5488D7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AB2256BD1C4EE42FA8D0C383 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB2257DC306F651E7FCF8568 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB225115C41C7CB66B084C13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5B19532B6BA6A1FAFF04727 /* Pods-JustEat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JustEat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bulbstudios.JustEat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AB22548272F6D7B1369F62F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB2258DB83A590978060271A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27CDF9E398EAE0DCD0BB3B5B /* Pods-JustEat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JustEat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bulbstudios.JustEat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AB225956BA6BD5B15E405EC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB2257078387B37E167CB18E /* Build configuration list for PBXProject "JustEat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB22548272F6D7B1369F62F3 /* Debug */,
+				AB225956BA6BD5B15E405EC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB22578692B2148AC676C56C /* Build configuration list for PBXNativeTarget "JustEat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB2258DB83A590978060271A /* Debug */,
+				AB225115C41C7CB66B084C13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB225D55F2E89BD319AAB0D6 /* Project object */;
+}
