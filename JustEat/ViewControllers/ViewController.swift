@@ -25,6 +25,54 @@ class ViewController: UIViewController {
 
         super.viewDidLoad()
 
+        performUIBindings()
+    }
+
+    private func searchWithPostcode(postcode: String) {
+
+        guard let observer = JustEatService.resturantSearchObservable(postcode) else {
+
+            return
+        }
+
+        observer.observeOn(MainScheduler.instance)
+        .subscribe(onNext: {
+            [unowned self] json in
+
+            self.parseJSON(json)
+        })
+        .addDisposableTo(bag)
+    }
+
+    private func parseJSON(json: AnyObject) {
+
+        guard let resturantJSON = json["Restaurants"], let resturants = Mapper<Resturant>().mapArray(resturantJSON) else {
+
+            print("Error parsing JSON")
+            return
+        }
+
+        self.setResturantArray(resturants)
+    }
+
+    private func clearSearch() {
+
+        setResturantArray([Resturant]())
+    }
+
+    private func setResturantArray(resturants: [Resturant]) {
+
+        self.resturantArray.value.removeAll(keepCapacity: false)
+        self.resturantArray.value += resturants
+    }
+}
+
+//UI Bindings using Rx
+
+extension ViewController {
+
+    func performUIBindings() {
+
         bindArrayToTableView()
         subscribeSearchChange()
     }
@@ -56,48 +104,10 @@ class ViewController: UIViewController {
         .throttle(0.4, scheduler: MainScheduler.instance)
         .distinctUntilChanged()
         .subscribeNext {
-            [unowned self] (postcode : String) in
+            [unowned self] (postcode: String) in
 
             postcode.characters.count == 0 ? self.clearSearch() : self.searchWithPostcode(postcode)
         }
         .addDisposableTo(bag)
-    }
-
-    private func searchWithPostcode(postcode: String) {
-
-        guard let observer = JustEatService.resturantSearchObservable(postcode) else {
-
-            return
-        }
-
-        observer.observeOn(MainScheduler.instance)
-        .subscribe(onNext: {
-           [unowned self] json in
-
-            self.parseJSON(json)
-        })
-        .addDisposableTo(bag)
-    }
-
-    private func parseJSON(json:AnyObject) {
-
-        guard let resturantJSON = json["Restaurants"], let resturants = Mapper<Resturant>().mapArray(resturantJSON) else {
-
-            print("Error parsing JSON")
-            return
-        }
-
-        self.setResturantArray(resturants)
-    }
-
-    private func clearSearch() {
-
-        setResturantArray([Resturant]())
-    }
-
-    private func setResturantArray(resturants: [Resturant]) {
-
-        self.resturantArray.value.removeAll(keepCapacity: false)
-        self.resturantArray.value += resturants
     }
 }
