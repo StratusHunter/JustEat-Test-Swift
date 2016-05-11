@@ -4,11 +4,12 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class Resturant: Mappable {
 
-    let name : String
-    let address : String
+    var name = ""
+    var address = ""
 
     required init?(_ map:Map) {
 

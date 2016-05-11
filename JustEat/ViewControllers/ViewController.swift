@@ -18,14 +18,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
 
     private let bag = DisposeBag()
-    private let tableDelegate = ResturantTableDelegate()
+    private var tableDelegate: ResturantTableDelegate?
 
     override func viewDidLoad() {
 
         super.viewDidLoad()
 
-        tableView.delegate = tableDelegate
-        tableView.dataSource = tableDelegate
+        tableDelegate = ResturantTableDelegate(tableView: tableView)
 
         subscribeSearchChange()
     }
@@ -39,29 +38,42 @@ class ViewController: UIViewController {
         .subscribeNext {
             [unowned self] (postcode) in
 
-            (postcode.count == 0) ? self.reloadSearchList() : self.searchWithPostcode(postcode)
+            (postcode.characters.count == 0) ? self.clearSearchList() : self.searchWithPostcode(postcode)
         }
-        .addDisposableTo(self.bag)
+        .addDisposableTo(bag)
     }
 
     //Convienience function to clear the list
-    private func reloadSearchList() {
+    private func clearSearchList() {
 
         reloadSearchList(Array<Resturant>())
     }
 
     private func reloadSearchList(resturantArray: [Resturant]) {
 
+        //tableDelegate.resturantArray = resturantArray
+
+        tableView.hidden = (resturantArray.count == 0)
         tableView.reloadData()
     }
 
     private func searchWithPostcode(postcode: String) {
 
-        let manager = Manager.sharedInstance
-        manager.rx_JSON(.GET, "")
-        .observeOn(MainScheduler.instance)
-        .subscribe {
+        guard let observer = JustEatService.resturantSearchObservable(postcode) else {
 
+            return
         }
+
+        observer.observeOn(MainScheduler.instance)
+        .subscribe(onNext: { event in
+
+                        //print(event)
+                   },
+                   onError: {
+                       error in
+
+                       print("Error \(error)")
+                   })
+        .addDisposableTo(bag)
     }
 }
