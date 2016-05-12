@@ -41,7 +41,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             return
         }
 
-        observer.map {
+        observer.observeOn(ConcurrentDispatchQueueScheduler(globalConcurrentQueueQOS: .Background))
+        .map {
 
             guard let resturantJSON = $0["Restaurants"] else {
 
