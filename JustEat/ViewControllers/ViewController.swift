@@ -41,7 +41,17 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             return
         }
 
-        observer.observeOn(MainScheduler.instance)
+        observer.map {
+
+            guard let resturantJSON = $0["Restaurants"] else {
+
+                print("Error parsing JSON")
+                return nil
+            }
+
+            return Mapper<Resturant>().mapArray(resturantJSON)
+        }
+        .observeOn(MainScheduler.instance)
         .subscribe(onNext: {
             [unowned self] json in
 
@@ -50,11 +60,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         .addDisposableTo(bag)
     }
 
-    private func parseJSON(json: AnyObject) {
+    private func parseJSON(json: [Resturant]?) {
 
-        guard let resturantJSON = json["Restaurants"], let resturants = Mapper<Resturant>().mapArray(resturantJSON) else {
+        guard let resturants = json else {
 
-            print("Error parsing JSON")
             return
         }
 
